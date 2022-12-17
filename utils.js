@@ -2,7 +2,7 @@ module.exports = {
   getDate: (mmyyyy) => {
     const d = new Date(
       mmyyyy.slice(2),
-      mmyyyy.slice(0, 2),
+      parseInt(mmyyyy.slice(0, 2)) - 1,
       parseInt(Math.random() * 29),
       parseInt(Math.random() * 10) + 12,
       parseInt(Math.random() * 60)
