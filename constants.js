@@ -16,16 +16,16 @@ module.exports = {
         discount: 200.00,
         lineItems: [
           {
-            name: 'Egg Paaneer role',
+            name: 'Egg Paaneer Role',
             quantity: 10,
             price: 200,
             total: 2000.00
           },
           {
-            name: 'Sprite 1L',
-            quantity: 5,
-            price: 250,
-            total: 1250.00
+            name: 'Lime Soda',
+            quantity: 13,
+            price: 100,
+            total: 1300.00
           },
           {
             name: 'Oreo Cookie Blizzard Cake [2450 Gms]',
@@ -50,6 +50,12 @@ module.exports = {
             quantity: 5,
             price: 850,
             total: 4250.00
+          },
+          {
+            name: 'Imperial Cheese Burger',
+            quantity: 10,
+            price: 150,
+            total: 1500.00
           }
         ],
         // to be calculated
