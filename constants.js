@@ -3,14 +3,15 @@ module.exports = {
     path: "./templates/food.handlebars",
     context: {
       restaurant: {
-        name: "Huber & Holly",
-        address: "Hinjewadi road near pakhare wasti wakad pune pcmc 25",
+        name: "Vaishaali",
+	address: "Fergusson College Rd, Ganeshwadi, Shivajinagar, Pune, Maharashtra 411005"
       },
       customer: {
         name: "Rajat Singla",
-        address: "103 Room Baner Road, Baner, Pune, Maharashtra, India Pune"
+        address: "c903, Equilife homes, Mahalunge, Pune, Maharashtra, 411045"
       },
       order: {
+        lines: 3,
         number: `0${Math.random().toString().substring(2, 13)}`,
         package: 300.00,
         discount: 200.00,
@@ -57,6 +58,98 @@ module.exports = {
             price: 150,
             total: 1500.00
           }
+        ],
+        // to be calculated
+        date: null,
+        total: 0,
+        subtotal: 0,
+        tax: 0,
+        // end
+      }
+    },
+  },
+
+  book: {
+    path: "./templates/book.handlebars",
+    context: {
+      customer: {
+        name: "Rajat Singla",
+        address: "c903, Equilife homes, Mahalunge, Pune, Maharashtra, 411045"
+      },
+      order: {
+        lines: 2,
+        number: `0${Math.random().toString().substring(2, 13)}`,
+        lineItems: [
+          {
+            name: 'To Kill a Mockingbird by Harper Lee',
+            quantity: 2,
+            seller: "RAREWAVES-IMPORTS",
+            price: 1400.00,
+            total: 2800.00
+          },
+          {
+            name: 'The Great Gatsby by F. Scott Fitzgerald',
+            quantity: 1,
+            seller: "RAREWAVES-IMPORTS",
+            price: 1600.00,
+            total: 1600.00
+          },
+          {
+            name: 'The Catcher in the Rye by J.D. Salinger',
+            quantity: 3,
+            seller: "Atlantic Publishers and Distributors",
+            price: 514.00,
+            total: 1542.00
+          },
+          {
+            name: 'C++ Programming Language| Fourth Edition| By Pearson',
+            quantity: 2,
+            seller: "Cocoblu Retail",
+            price: 1020.00,
+            total: 2040.00
+          },
+          {
+            name: 'Expert Python Programming: Master advanced programming concepts, 4th Edition',
+            quantity: 1,
+            seller: "Repro Books-On-Demand",
+            price: 2957.00,
+            total: 2957.00
+          },
+          {
+            name: 'FLUTTER A Complete Book for Mobile App Development',
+            quantity: 2,
+            seller: "VIHU Livre",
+            price: 700.00,
+            total: 1400.00
+          },
+          {
+            name: 'The Psychology of Money Hardcover',
+            quantity: 4,
+            seller: "Cocoblu Retail",
+            price: 380.00,
+            total: 1520.00
+          },
+          {
+            name: 'Doglapan: The Hard Truth about Life and Start-Ups',
+            quantity: 3,
+            seller: "uRead-Store",
+            price: 542.00,
+            total: 1626.00
+          },
+          {
+            name: 'The Richest Man In Babylon Mass Market Paperback',
+            quantity: 1,
+            seller: "Cocoblu Retail",
+            price: 2841.00,
+            total: 2841.00
+          },
+          {
+            name: 'How to Win Friends and Influence People Mass Market Paperback',
+            quantity: 2,
+            seller: "Cocoblu Retail",
+            price: 844.00,
+            total: 1688.00
+          },
         ],
         // to be calculated
         date: null,
