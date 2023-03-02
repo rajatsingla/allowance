@@ -1,6 +1,7 @@
 # Generate allowance bill
 
 - Make changes in constants.js
+- npm install
 
 Run:
 ```
