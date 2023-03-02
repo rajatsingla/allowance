@@ -8,7 +8,7 @@ program
   .option("-my, --mmyyyy <monthyear>", "Month Year")
   .addOption(
     new Option("-t, --type <type>", "Type of bill")
-      .choices(["food", "book", "internet"])
+      .choices(["food", "book", "internet", "mobile"])
       .default("food")
   );
 
@@ -22,7 +22,12 @@ if (!options.mmyyyy) {
 // Options end
 
 const compileTemplate = async (path, context) => {
-  let viewEngine = handlebars.create({ defaultLayout: false });
+  let viewEngine = handlebars.create({ 
+    defaultLayout: false, 
+    helpers: {
+      add: function (...args) { return parseFloat([...args].reduce((a, b) => a + b, 0)).toFixed(2); }
+  }
+  });
   let html = await viewEngine.renderView(path, context);
   return html;
 };

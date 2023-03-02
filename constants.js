@@ -194,5 +194,35 @@ module.exports = {
         // end
       }
     },
+  },
+
+
+  mobile: {
+    path: "./templates/mobile.handlebars",
+    context: {
+      customer: {
+        name: "Rajat Singla",
+        phone: 123456789,
+        email: 'rajat@gmail.com',
+        account: 969367,
+      },
+      order: {
+        lines: 1,
+        number: `0${Math.random().toString().substring(2, 13)}`,
+        lineItems: [
+          {
+            quantity: 1,
+            price: 940,
+            tax: 84.60
+          },
+        ],
+        // to be calculated
+        date: null,
+        total: 0,
+        subtotal: 0,
+        tax: 0,
+        // end
+      }
+    },
   }
 };
