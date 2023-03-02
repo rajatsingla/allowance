@@ -126,7 +126,7 @@
   <p style="text-indent: 0pt;text-align: left;"><br></p>
   <h1 style="padding-left: 6pt;text-indent: 0pt;text-align: left;">Order Placed: <span class="p">{{order.date}}</span></h1>
   <h1 style="padding-left: 6pt;text-indent: 0pt;text-align: left;">Amazon.in order number: <span class="p">{{order.number}}</span></h1>
-  <h1 style="padding-left: 6pt;text-indent: 0pt;text-align: left;">Order Total: {{order.total}}/-</h1>
+  <h1 style="padding-left: 6pt;text-indent: 0pt;text-align: left;">Order Total: {{order.total}}.00</h1>
   <p style="text-indent: 0pt;text-align: left;"><br></p>
   <table style="border-collapse:collapse;margin-left:6pt" cellspacing="0">
     <tbody><tr style="height:18pt">
@@ -150,7 +150,7 @@
         <p class="s3" style="padding-top: 1pt;padding-left: 3pt;text-indent: 0pt;text-align: left;">{{this.quantity}} of: <span class="s4">{{this.name}}</p>
       </td>
       <td style="width:117pt;border-right-style:solid;border-right-width:2pt">
-        <p class="s3" style="padding-top: 1pt;padding-right: 2pt;text-indent: 0pt;text-align: right;">{{this.price}} × {{this.quantity}} = {{this.total}}/-</p>
+        <p class="s3" style="padding-top: 1pt;padding-right: 2pt;text-indent: 0pt;text-align: right;">{{this.price}} × {{this.quantity}} = {{this.total}}.00</p>
       </td>
     </tr>
     <tr style="height:11pt">
@@ -229,12 +229,12 @@
     display: inline-block;
     float: right;
 ">
-  <p style="padding-top: 6pt;text-indent: 0pt;text-align: right;">Item(s) Subtotal: {{order.total}}/-</p>
+  <p style="padding-top: 6pt;text-indent: 0pt;text-align: right;">Item(s) Subtotal: {{order.total}}.00</p>
   <p style="padding-top: 3pt;text-indent: 0pt;text-align: right;">Shipping: 0.00</p>
   <p style="text-indent: 0pt;text-align: left;"><br></p>
-  <p style="text-indent: 0pt;text-align: right;">Total: {{order.total}}/-</p>
+  <p style="text-indent: 0pt;text-align: right;">Total: {{order.total}}.00</p>
   <p style="padding-top: 3pt;text-indent: 0pt;text-align: right;">-----</p>
-  <h1 style="padding-top: 3pt;text-indent: 0pt;text-align: right;">Grand Total: {{order.total}}/-</h1>
+  <h1 style="padding-top: 3pt;text-indent: 0pt;text-align: right;">Grand Total: {{order.total}}.00</h1>
 </div>
   <p style="text-indent: 0pt;text-align: left;"><br></p>
   <p class="s9" style="padding-top: 4pt;/* padding-left: 144pt; */text-indent: 0pt;text-align: center;"><a href="https://www.amazon.in/gp/css/summary/edit.html?orderID=406-6029795-0544332" style=" color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9.5pt;" target="_blank">To view the status of your order, return to </a><span style=" color: #004B91; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 9.5pt;">Order Summary</span> <span style=" color: #000;">.</span></p>

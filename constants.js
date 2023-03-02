@@ -160,4 +160,39 @@ module.exports = {
       }
     },
   },
+
+  internet: {
+    path: "./templates/internet.handlebars",
+    context: {
+      customer: {
+        name: "Rajat Singla",
+        address: "c903, Equilife homes, Mahalunge, Pune, Maharashtra, 411045",
+        phone: 123456789,
+        email: 'rajat@gmail.com',
+        account: 969367,
+      },
+      order: {
+        lines: 1,
+        number: `0${Math.random().toString().substring(2, 13)}`,
+        lineItems: [
+          {
+            quantity: 1,
+            subCharges: 900,
+            cpeCharges: 40,
+            amount: 940,
+            serviceTax: 112.80,
+            cess: 28.20,
+            price: 1081,
+            lateAmount: 1150.00
+          },
+        ],
+        // to be calculated
+        date: null,
+        total: 0,
+        subtotal: 0,
+        tax: 0,
+        // end
+      }
+    },
+  }
 };

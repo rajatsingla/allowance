@@ -23,6 +23,26 @@ module.exports = {
     })}  ${d.toLocaleDateString("en-IN", { timeStyle: "short" })}`;
   },
 
+  monthStartDate: (date) => {
+    var date = new Date(date);
+    var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+    return `${firstDay.toLocaleDateString("en-IN", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    })}`;
+  },
+
+  monthEndDate: (date) => {
+    var date = new Date(date);
+    var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+    return `${lastDay.toLocaleDateString("en-IN", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    })}`;
+  },
+
   calculatePrice: (order) => {
     const lineItems = [...order.lineItems]
       .sort(() => 0.5 - Math.random())

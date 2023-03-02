@@ -8,7 +8,7 @@ program
   .option("-my, --mmyyyy <monthyear>", "Month Year")
   .addOption(
     new Option("-t, --type <type>", "Type of bill")
-      .choices(["hotel", "food", "book"])
+      .choices(["food", "book", "internet"])
       .default("food")
   );
 
@@ -32,6 +32,8 @@ const data = constants[options.type];
 const print = async () => {
   data.context.order.date = utils.getDate(options.mmyyyy);
   data.context.order.shortDate = utils.getShortDate(data.context.order.date);
+  data.context.order.monthStartDate = utils.monthStartDate(data.context.order.date);
+  data.context.order.monthEndDate = utils.monthEndDate(data.context.order.date);
   data.context.order = utils.calculatePrice(data.context.order);
   const html = await compileTemplate(data.path, data.context);
   console.log(html);
